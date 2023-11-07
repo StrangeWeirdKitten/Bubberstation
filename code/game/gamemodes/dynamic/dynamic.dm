@@ -114,7 +114,7 @@ GLOBAL_LIST_EMPTY(dynamic_forced_rulesets)
 	/// A number between 0.5 and 4.
 	/// Higher value will favour extreme rounds and
 	/// lower value rounds closer to the average.
-	var/threat_curve_width = 1.8
+	var/threat_curve_width = 2.5
 
 	/// A number between -5 and +5.
 	/// Equivalent to threat_curve_centre, but for the budget split.
