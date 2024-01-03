@@ -18,12 +18,13 @@ required_map = "builtin"
 coordinates = [128, 79, 1]
 trait_name = "CentCom"
 
+### BUBBERSTATION REVERT - CHANGES THE COORDINATES TO ERASE INTERLINK DOCK###
 # CC Evac Docking Port Removal
 [templates.centcom_shuttle_dock]
 map_files = ["centcom_shuttle_dock.dmm"]
 directory = "_maps/skyrat/automapper/templates/centcom/"
 required_map = "builtin"
-coordinates = [206, 85, 1]
+coordinates = [51, 167, 4]
 trait_name = "CentCom"
 
 # METASTATION MAP TEMPLATES
