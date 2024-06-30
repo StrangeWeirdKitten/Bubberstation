@@ -102,10 +102,6 @@
 	name = "Folded Galactic Federation Flag"
 	item_path = /obj/item/sign/flag/galfed
 
-/datum/loadout_item/pocket_items/flag_moghes //sprites by Crumpaloo
-	name = "Folded Tizirian Empire Flag"
-	item_path = /obj/item/sign/flag/tizira
-
 /*
 *	NIF LENSES
 */
