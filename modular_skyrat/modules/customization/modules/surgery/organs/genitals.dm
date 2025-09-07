@@ -19,6 +19,8 @@
 	var/uses_skin_color = FALSE
 	/// Where the genital is actually located, for clothing checks.
 	var/genital_location = GROIN
+	// Blank Image
+	var/image/blank
 
 //This translates the float size into a sprite string
 /obj/item/organ/genital/proc/get_sprite_size_string()
@@ -95,6 +97,15 @@
 		else
 			return FALSE
 
+/*
+/obj/item/organ/genital/update_overlays()
+	. = ..()
+	var/image = .
+	for(var/client/clients in GLOB.lewd_visibility_clients.visibility_list)
+		blank = image('icons/blanks/32x32.dmi', image, "nothing")
+		blank.override = TRUE
+		clients.images += blank
+*/
 
 /datum/bodypart_overlay/mutant/genital
 	layers = EXTERNAL_FRONT

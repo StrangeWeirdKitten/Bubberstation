@@ -176,3 +176,10 @@ export const vore_overlay_options: FeatureToggle = {
     'Do you want to see fullscreen vore overlays as an option for soulcatcher overlays?',
   component: CheckboxInput,
 };
+
+export const lewd_visibility: FeatureToggle = {
+  name: 'Genital Visibility',
+  category: 'ERP',
+  description: 'Do you want to see genitial sprites?',
+  component: CheckboxInput,
+}
