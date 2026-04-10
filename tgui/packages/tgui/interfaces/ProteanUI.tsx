@@ -25,7 +25,7 @@ type ProteanData = {
 
 export const ProteanUI = () => {
   const { data, act } = useBackend<ProteanData>();
-  const { lock, metal, metal_max, icon, icon_state } = data;
+  const { lock, metal, metal_max, icon, icon_state, low_power } = data;
 
   return (
     <Window width={400} height={270}>
@@ -75,21 +75,21 @@ export const ProteanUI = () => {
             <Table.Row>
               <Table.Cell textAlign="center">
                 <Button
-                  color="green"
+                  color={low_power ? 'bad' : 'default'}
                   icon="plug"
                   onClick={() => act('power')}
                 />
               </Table.Cell>
               <Table.Cell textAlign="center">
                 <Button
-                  color="green"
+                  color="default"
                   icon="suitcase"
                   onClick={() => act('transform')}
                 />
               </Table.Cell>
               <Table.Cell textAlign="center">
                 <Button
-                  color="green"
+                  color="default"
                   icon="heart"
                   onClick={() => act('heal')}
                 />
