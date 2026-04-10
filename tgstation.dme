@@ -9402,6 +9402,7 @@
 #include "modular_zubbers\code\modules\customization\species\proteans\protean_prefab.dm"
 #include "modular_zubbers\code\modules\customization\species\proteans\protean_servo_module.dm"
 #include "modular_zubbers\code\modules\customization\species\proteans\protean_status_effects.dm"
+#include "modular_zubbers\code\modules\customization\species\proteans\protean_ui.dm"
 #include "modular_zubbers\code\modules\customization\species\proteans\protean_verbs.dm"
 #include "modular_zubbers\code\modules\customization\species\proteans\organs\protean_brain.dm"
 #include "modular_zubbers\code\modules\customization\species\proteans\organs\protean_ears.dm"
