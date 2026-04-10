@@ -39,7 +39,7 @@
 
 /datum/action/protean
 	name = "Protean Interface"
-	desc = "<b>Left Click</b>Opens the Protean interface. <b>Right Click</b> toggles suit transformation."
+	desc = "<b>Left Click</b> Opens the Protean interface.<br><b>Right Click</b> toggles suit transformation."
 	button_icon = 'icons/obj/clothing/modsuit/mod_clothing.dmi'
 	button_icon_state = "standard-control-sealed"
 
