@@ -28,8 +28,8 @@ export const MODsuitremote = (props) => {
   return (
     <Window
       theme={ui_theme}
-      width={600}
-      height={600}
+      width={550}
+      height={350}
       title="MOD Remote Interface"
     >
       <Window.Content scrollable>
