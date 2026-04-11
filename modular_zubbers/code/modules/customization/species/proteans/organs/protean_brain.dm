@@ -84,6 +84,7 @@
 	owner.remove_status_effect(/datum/status_effect/protean_low_power_mode/low_power)
 	suit.drop_suit()
 	owner.forceMove(suit)
+	owner.reset_perspective(suit)
 	sleep(12) //Sleep is fine here because I'm not returning anything and if the brain gets deleted within 12 ticks of this being ran, we have some other serious issues.
 	owner.invisibility = initial(owner.invisibility)
 
@@ -111,6 +112,7 @@
 	sleep(12) //Same as above
 	suit.drop_suit()
 	owner.forceMove(suit.loc)
+	owner.reset_perspective(null)
 	if(owner.get_item_by_slot(ITEM_SLOT_BACK))
 		owner.dropItemToGround(owner.get_item_by_slot(ITEM_SLOT_BACK), TRUE, TRUE, TRUE)
 	owner.equip_to_slot_if_possible(suit, ITEM_SLOT_BACK, disable_warning = TRUE)
