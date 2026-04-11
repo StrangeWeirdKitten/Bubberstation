@@ -87,6 +87,7 @@
 
 /datum/species/protean/Destroy(force)
 	QDEL_NULL(species_modsuit)
+	QDEL_NULL(protean_action)
 	owner = null
 	. = ..()
 
@@ -129,7 +130,7 @@
 	gainer.dropItemToGround(species_modsuit, TRUE)
 	if(species_modsuit)
 		QDEL_NULL(species_modsuit)
-	QDEL_NULL(protean_action)
+	protean_action.Remove(owner)
 	owner = null
 
 /datum/species/protean/proc/equip_modsuit(mob/living/carbon/human/gainer)
