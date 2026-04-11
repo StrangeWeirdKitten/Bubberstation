@@ -185,7 +185,9 @@
 	var/obj/item/mod/core/protean/source = core
 	var/datum/species/protean/species = source.linked_species
 	if(isprotean(species.owner) && species.owner == user && user.loc == src)
-		return 2
+		return UI_INTERACTIVE
+	if(species.owner != user)
+		return UI_INTERACTIVE
 	. = ..()
 
 /obj/item/mod/control/pre_equipped/protean/proc/assimilate_theme(mob/user, plating)

@@ -1,9 +1,3 @@
-/mob/living/carbon/proc/protean_ui()
-	var/datum/species/protean/species = dna.species
-	if(!istype(species))
-		return
-	species.species_modsuit.ui_interact(src)
-
 /mob/living/carbon/proc/protean_main_ui()
 	var/datum/species/protean/species = dna.species
 	if(!istype(species))
@@ -34,7 +28,7 @@
 	to_chat(src, span_notice("You [suit.modlocked ? "<b>lock</b>" : "<b>unlock</b>"] the suit [isprotean(suit.wearer) || loc == suit ? "" : "onto [suit.wearer]"]"))
 	playsound(src, 'sound/machines/click.ogg', 25)
 
-/mob/living/carbon/proc/suit_transformation()
+/mob/living/carbon/proc/suit_transformation(forced = FALSE)
 	var/obj/item/organ/brain/protean/brain = get_organ_slot(ORGAN_SLOT_BRAIN)
 
 	if(!istype(brain))
@@ -44,7 +38,7 @@
 		brain.leave_modsuit()
 	else if(isturf(loc))
 		if(!incapacitated)
-			brain.go_into_suit()
+			brain.go_into_suit(forced)
 		else
 			balloon_alert(src, "incapacitated!")
 

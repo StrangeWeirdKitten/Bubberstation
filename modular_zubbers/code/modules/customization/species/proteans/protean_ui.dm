@@ -15,9 +15,9 @@
 	data["icon_state"] = species_modsuit?.icon_state
 	return data
 
-/datum/species/protean/ui_status(mob/user)
+/datum/species/protean/ui_status(mob/user) // Protean's UI
 	if(user == owner)
-		return 2
+		return UI_INTERACTIVE
 	. = ..()
 
 /datum/species/protean/ui_act(action, list/params, datum/tgui/ui, datum/ui_state/state)
@@ -28,11 +28,11 @@
 		if("lock")
 			owner.lock_suit()
 		if("openui")
-			owner.protean_ui()
+			species_modsuit.ui_interact(usr)
 		if("power")
 			owner.low_power()
 		if("transform")
-			owner.suit_transformation()
+			owner.suit_transformation(owner == usr ? FALSE : TRUE) // Others can force the protean to fold.
 		if("heal")
 			owner.protean_heal()
 	return TRUE
